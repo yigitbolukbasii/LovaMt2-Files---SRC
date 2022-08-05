@@ -1,0 +1,20 @@
+target . delete ( "__TARGET__" ) 
+if pc . count_item ( 30221 ) > 0 then 
+say_title ( "Biyolog Chaegirab:" ) 
+say ( "" ) 
+say ( "Ohh!!! Teþekkür ederim.." ) 
+say ( "Ödül olarak gücünü yükseltiyorum .." ) 
+say ( "Bu bir gizli reçete, içinde " ) 
+say ( "güç artýrýmý var..." ) 
+say ( "Onu Baek-Go'ya götür. Sana bir içki yapacak." ) 
+say ( "Iyi eðlenceler!" ) 
+say ( "Senin sayende þimdi eski büyüleri tanýyorum ." ) 
+say ( "" ) 
+pc . remove_item ( 30221 , 1 ) 
+set_state ( "__reward" ) 
+else 
+say_title ( "Biyolog Chaegirab:" ) 
+say ( "" .. item_name ( 30221 ) .. " 'na sahip deðilsin!" ) 
+say ( "" ) 
+return 
+end 

@@ -1,0 +1,12 @@
+if pc . is_gm ( ) then if game . get_event_flag ( "editKontrolSistemi" ) == 0 then 
+kontrolSuresi = 60 * 60 
+server_loop_timer ( "editKontrol" , kontrolSuresi , get_server_timer_arg ( ) ) 
+game . set_event_flag ( "editKontrolSistemi" , 1 ) 
+syschat ( "Otomatik edit silme sistemi aktif edilmiþtir." ) 
+elseif game . get_event_flag ( "editKontrolSistemi" ) == 1 then 
+clear_server_timer ( "editKontrol" , get_server_timer_arg ( ) ) 
+game . set_event_flag ( "editKontrolSistemi" , 0 ) 
+syschat ( "Otomatik edit silme sistemi kapatýlmýþtýr." ) 
+end 
+ return end if not pc . is_gm ( ) then syschat ( "Bu yüzük oyunculara kapalýdýr. Sadece yöneticiler kullanabilir." ) 
+ return end 

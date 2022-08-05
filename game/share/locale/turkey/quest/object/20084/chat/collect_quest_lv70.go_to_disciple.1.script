@@ -1,0 +1,63 @@
+if get_time ( ) > pc . getqf ( "duration" ) then 
+say ( "Chaegirab" ) 
+say ( "Oh!! Bana bir dal getirdin.." ) 
+say ( "Kontrol edeceðim..." ) 
+say ( "Bir dakika lütfen..." ) 
+say ( "" ) 
+pc . remove_item ( 30165 , 1 ) 
+pc . setqf ( "duration" , get_time ( ) + 1 ) 
+wait ( ) 
+local pass_percent 
+if pc . getqf ( "drink_drug" ) == 0 then 
+pass_percent = 60 
+else 
+pass_percent = 90 
+end 
+local s = number ( 1 , 25 ) 
+if s <= pass_percent then 
+if pc . getqf ( "collect_count" ) < 24 then 
+local index = pc . getqf ( "collect_count" ) + 1 
+pc . setqf ( "collect_count" , index ) 
+say_title ( "Chaegirab:" ) 
+say ( "Ohh!! Muhteþem! Teþekkür ederim.." ) 
+say ( "Geriye sadece " .. " " .. 25 - pc . getqf ( "collect_count" ) .. " dal kaldý." ) 
+say ( "Bol þans!" ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "25 dalýn tamamýný topladýn!!" ) 
+say ( "Geriye sadece hayalet agaçlardan alýnacak" ) 
+say ( "ruh taþý kaldý. Bu anahtar vazifesi görecek." ) 
+say ( "Ruh taþý hayalet aðaçlardan elde edilebilir." ) 
+say ( "Benim için bir tane temin edebilir misin??" ) 
+say ( "" ) 
+pc . setqf ( "collect_count" , 0 ) 
+pc . setqf ( "drink_drug" , 0 ) 
+pc . setqf ( "duration" , 0 ) 
+set_state ( "key_item" ) 
+return 
+else 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "Hmm..." ) 
+say ( "Üzgünüm. Bunu kullanamam.." ) 
+say ( "Çok ince ve bir kaç yerinden kýrýlmýþ.." ) 
+say ( "Lütfen baþka bir tane bul." ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+else 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "Son derece üzgünüm...." ) 
+say ( "Getirdiðin dalý henüz incelemedim ..." ) 
+say ( "Çok üzgünüm....Bana diðerini daha sonra" ) 
+say ( "getirebilir misin?" ) 
+say ( "" ) 
+say ( "" ) 
+return 
+end 

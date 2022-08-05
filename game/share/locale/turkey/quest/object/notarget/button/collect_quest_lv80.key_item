@@ -1,0 +1,19 @@
+if pc . count_item ( 30225 ) > 0 then 
+say_title ( "Tugyinin Ruh Taþý " ) 
+say ( "" ) 
+say ( "Sonunda Tugyinin Ruh Taþý'ný buldun." ) 
+say ( "Onu Chaegirab'a götür." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Tugyinin Ruh Taþý " ) 
+say ( "" ) 
+say ( "Uriel'in çýraðý Chaegirab'ýn araþtýrmasý için " ) 
+say ( "hayalet savasçýlara ait 30 Tugyis Tabelasý topladýn." ) 
+say ( "Son olarak ihtiyaç duyulan Tugyinin" ) 
+say ( "Ruh Taþý." ) 
+say_item_vnum ( 30225 ) 
+say ( "Onu Yýlan Vadisindeki hayalet savasçýlardan " ) 
+say ( "kazanabilirsin. Onu Chaegirab'a ver." ) 
+say ( "" ) 
+say ( "" ) 

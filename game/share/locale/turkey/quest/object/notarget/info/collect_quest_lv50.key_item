@@ -1,0 +1,19 @@
+if pc . count_item ( 30222 ) > 0 then 
+say_title ( "Sagyinin Ruh Taþý'ný kazandýn." ) 
+say ( "" ) 
+say ( "Nihayet! Sagyinin Ruh Taþý'ný aldýk." ) 
+say ( "Onu Chaegirab'a götürelim." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Bana Sagyinin Ruh Taþý lazým" ) 
+say ( "" ) 
+say ( "Chaegirab'ýn incelemesi için, 15 tane" ) 
+say ( "Þeytan Hatýrasý " ) 
+say ( "numunesi buldun. Son olarak" ) 
+say ( "Sagyinin Ruh Taþý lazým." ) 
+say ( "" ) 
+say_item_vnum ( 30222 ) 
+say ( "Ruh taþýný bulup," ) 
+say ( "Chaegirab'a götür." ) 
+say ( "" ) 

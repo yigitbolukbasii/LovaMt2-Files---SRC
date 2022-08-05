@@ -1,0 +1,36 @@
+pet_system={["start"]=0,get_pet_info= function (itemVnum)pet_info_map = { 
+[ 53001 ] = { 34001 , "'s Anka Kuþu " , 0 } , 
+[ 53002 ] = { 34002 , "'s Ren Geyiði Yavrusu " , 0 } , 
+[ 53003 ] = { 34003 , "'s Buz Ankasý " , 0 } , 
+[ 53005 ] = { 34004 , "'s Yavru Azrail " , 0 } , 
+[ 53006 ] = { 34009 , "'s Yavru Azrail(altýn) " , 0 } , 
+[ 53007 ] = { 34010 , "'s Bambi " , 0 } , 
+[ 53008 ] = { 34011 , "'s Knuud " , 0 } , 
+[ 53009 ] = { 34012 , "'s Bao Bao " , 0 } , 
+[ 53010 ] = { 34008 , "'s Leonidas " , 0 } , 
+[ 53011 ] = { 34007 , "'s Khan " , 0 } , 
+[ 53012 ] = { 34005 , "'s Porki " , 0 } , 
+[ 53013 ] = { 34006 , "'s Rufus " , 0 } , 
+[ 53014 ] = { 34013 , "'s Cellatcýk " , 0 } , 
+[ 53015 ] = { 34014 , "'s Cellatcýk(altýn) " , 0 } , 
+[ 53016 ] = { 34015 , "'s Boney " , 0 } , 
+[ 53017 ] = { 34016 , "'s Yeþim Ankasý " , 0 } , 
+[ 38200 ] = { 34006 , "'s Rufus " , 0 } , 
+[ 38201 ] = { 34006 , "'s Rufus " , 0 } , 
+[ 53018 ] = { 34017 , "'s Kar Leonidas " , 0 } , 
+[ 53019 ] = { 34018 , "'s Arktik Khan " , 0 } , 
+[ 53020 ] = { 34019 , "'s Kutup Porki " , 0 } , 
+[ 53021 ] = { 34020 , "'s Ayaz Rufus " , 0 } , 
+[ 53022 ] = { 34021 , "'s Sheldon " , 0 } , 
+[ 53023 ] = { 34022 , "'s Cooper " , 0 } , 
+[ 53024 ] = { 34023 , "'s Panter Yavrusu " , 0 } , 
+[ 53025 ] = { 34024 , "'s Leopar Yavrusu " , 0 } , 
+} 
+itemVnum = tonumber ( itemVnum ) 
+return pet_info_map [ itemVnum ] 
+end ,get_spawn_effect_file= function (idx)effect_table = { 
+[ 0 ] = nil , 
+[ 1 ] = "d:\\ymir work\\effect\\etc\\buff\\buff_item3.mse" , 
+} 
+return effect_table [ idx ] 
+end }

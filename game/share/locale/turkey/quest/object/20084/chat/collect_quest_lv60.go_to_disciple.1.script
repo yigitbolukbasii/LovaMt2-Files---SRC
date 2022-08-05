@@ -1,0 +1,66 @@
+if get_time ( ) > pc . getqf ( "duration" ) then 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "Oh!! Buldun..." ) 
+say ( "Önce incelemem lazým..." ) 
+say ( "Büyütecim nerede.." ) 
+say ( "Bir dakika..." ) 
+say ( "" ) 
+pc . remove_item ( 30050 , 1 ) 
+pc . setqf ( "duration" , get_time ( ) + 1 ) 
+wait ( ) 
+local pass_percent 
+if pc . getqf ( "drink_drug" ) == 0 then 
+pass_percent = 60 
+else 
+pass_percent = 90 
+end 
+local s = number ( 1 , 20 ) 
+if s <= pass_percent then 
+if pc . getqf ( "collect_count" ) < 19 then 
+local index = pc . getqf ( "collect_count" ) + 1 
+pc . setqf ( "collect_count" , index ) 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "Ohh!! Harika! Saðol..." ) 
+say ( "Hala " .. " " .. 20 - pc . getqf ( "collect_count" ) .. " tane gerek." ) 
+say ( "Bol þanslar!" ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "20 tane buz topunun hepsini topladýn!" ) 
+say ( "Yalnýz biþey eksik; buz ruhu'nun" ) 
+say ( "ruh taþý, o bizim anahtarýmýz." ) 
+say ( "Bu ruh taþýný " ) 
+say ( "buz canavarlarýndan alabilirsin." ) 
+say ( "Bunu yapabilir misin?" ) 
+say ( "" ) 
+pc . setqf ( "collect_count" , 0 ) 
+pc . setqf ( "drink_drug" , 0 ) 
+pc . setqf ( "duration" , 0 ) 
+set_state ( "key_item" ) 
+return 
+else 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "Hmm......" ) 
+say ( "Kusura bakma, ama bu buz topunu kullanamam.." ) 
+say ( "Bu kýrýk." ) 
+say ( "Bir tane daha getirir misin?" ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+else 
+say_title ( "Chaegirab:" ) 
+say ( "" ) 
+say ( "Kusura Bakma..." ) 
+say ( "Son Buz topunu, daha" ) 
+say ( "incelemedim....." ) 
+say ( "Sonra bir daha gelir misin?" ) 
+say ( "" ) 
+return 
+end 

@@ -1,0 +1,21 @@
+if pc . count_item ( 30221 ) > 0 then 
+say_title ( "Tapýnaðýn Ruh Taþý " ) 
+say ( "" ) 
+say ( "Nihayet! Ruh taþýný " ) 
+say ( "buldun, onu Chaegirab'a götür." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Tapýnaðýn Ruh taþý " ) 
+say ( "" ) 
+say ( "Uriel'in öðrencisi Chaegirab" ) 
+say ( "için 15 lanet kitabý " ) 
+say ( "buldun, son olarak" ) 
+say ( "gizli mezhebin tapýnaðýndan ruh taþý lazým." ) 
+say ( "" ) 
+say_item_vnum ( 30221 ) 
+say ( "Onu bul ve Chaegirab'a götür." ) 
+say ( "Ruh taþýný " .. mob_name ( 734 ) .. " , " ) 
+say ( "" .. mob_name ( 735 ) .. " , " .. mob_name ( 736 ) .. "" ) 
+say ( "ve " .. mob_name ( 737 ) .. " den alabilirsin." ) 
+say ( "" ) 

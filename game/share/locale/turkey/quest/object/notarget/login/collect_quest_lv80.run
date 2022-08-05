@@ -1,0 +1,2 @@
+if pc . level >= 80 and pc . level <= 106 and not pc . is_gm ( ) then set_state ( "information" ) 
+ return end 

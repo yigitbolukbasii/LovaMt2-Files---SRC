@@ -1,0 +1,79 @@
+if get_time ( ) > pc . getqf ( "duration" ) then 
+if pc . count_item ( 30006 ) > 0 then 
+say_title ( "Biyolog Chaegirab" ) 
+say ( "" ) 
+say ( "Ah!! Bana bir azý diþi getirdin." ) 
+say ( "Önce denemem lazým..." ) 
+say ( "Bu biraz zaman alabilir. Belki bir kaç gün." ) 
+say ( "Daha sonra yine gel." ) 
+say ( "" ) 
+pc . remove_item ( "30006" , 1 ) 
+if is_test_server ( ) then 
+pc . setqf ( "duration" , get_time ( ) + 2 ) 
+else 
+pc . setqf ( "duration" , get_time ( ) + 1 ) 
+end 
+wait ( ) 
+local pass_percent 
+if pc . getqf ( "drink_drug" ) == 0 then 
+pass_percent = 60 
+else 
+pass_percent = 90 
+end 
+local s = number ( 1 , 10 ) 
+if s <= pass_percent then 
+if pc . getqf ( "collect_count" ) < 9 then 
+local index = pc . getqf ( "collect_count" ) + 1 
+pc . setqf ( "collect_count" , index ) 
+say_title ( "Biyolog Chaegirab" ) 
+say ( "" ) 
+say ( "Müthiþ!! Sen bir harikasýn..." ) 
+say ( "Þimdi bana bu araþtýrma için " .. " " .. 10 - pc . getqf ( "collect_count" ) .. "tane " ) 
+say ( "daha diþ lazým." ) 
+say ( "Tamamlamak için" ) 
+say ( "Bol Þanslar!" ) 
+say ( "" ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+say_title ( "Biyolog Chaegirab:" ) 
+say ( "" ) 
+say ( "Bana azý diþlerini topladýn !!" ) 
+say ( "Ama þimdi bana özel bir taþ " ) 
+say ( "lazým.  Jinunggy'nin ruh taþý, onu" ) 
+say ( "bana getirebilir misin?" ) 
+say ( "Onu Orklarda bulabilirsin. " ) 
+say ( "" ) 
+pc . setqf ( "collect_count" , 0 ) 
+pc . setqf ( "drink_drug" , 0 ) 
+pc . setqf ( "duration" , 0 ) 
+set_state ( "key_item" ) 
+return 
+else 
+say_title ( "Biyolog Chaegirab:" ) 
+say ( "Hmm.... Ne yazýk ki bu kýrýk..." ) 
+say ( "Bunu kullanamam.." ) 
+say ( "Bana bir tane daha getir." ) 
+say ( "" ) 
+pc . setqf ( "drink_drug" , 0 ) 
+return 
+end 
+else 
+say_title ( "Biyolog Chaegirab:" ) 
+say ( "" .. item_name ( 30006 ) .. " 'ne sahip deðilsin!" ) 
+return 
+end 
+else 
+say_title ( "Biyolog Chaegirab:" ) 
+say ( "" ) 
+say ( "Çok özür dilerim...." ) 
+say ( "Son Analiz daha bitmedi " ) 
+say ( "Kusura bakma.." ) 
+say ( "Sonra bir daha .." ) 
+say ( "gelebilir misin?" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+return 
+end 
